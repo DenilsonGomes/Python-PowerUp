@@ -11,7 +11,7 @@ import pandas
 pyautogui.PAUSE = 2
 
 # 1. Entrar no sistema da empresa
-""" 
+ 
 pyautogui.press('win')
 pyautogui.write('chrome')
 pyautogui.press('enter')
@@ -27,7 +27,7 @@ time.sleep(5)
 pyautogui.write('seu_email')
 pyautogui.press('tab')
 pyautogui.write('sua_senha')
-pyautogui.press('enter') """
+pyautogui.press('enter')
 
 # 3. Importar a base de dados
 tabela_produtos = pandas.read_csv("produtos.csv")
