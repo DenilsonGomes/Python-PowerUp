@@ -5,6 +5,7 @@ Este projeto consiste na automação da tarefa de cadastro de produtos em sistem
 ## Base de dados
 
 A base de dados dos produtos a serem cadastrados está no arquivo produtos.csv.
+<img src="produtos.jpg" alt="Tabela de produtos" />
 
 ## Captura da posição do mouse
 
