@@ -8,9 +8,10 @@ import pandas
 # 4. Cadastrar 1 produto
 # 5. Repetir 4 até acabar os produtos
 
-pyautogui.PAUSE = 1
+pyautogui.PAUSE = 2
 
 # 1. Entrar no sistema da empresa
+""" 
 pyautogui.press('win')
 pyautogui.write('chrome')
 pyautogui.press('enter')
@@ -19,19 +20,20 @@ link = "https://drive.google.com/drive/folders/1l9iQXjwRqkR0d9w3Vr7VY6tVZuT6UW4K
 pyautogui.write(link)
 pyautogui.press('enter')
 
-time.sleep(3)
+time.sleep(5)
 
 # 2. Fazer login
 #pyautogui.click(x=400, y=300)
 pyautogui.write('seu_email')
 pyautogui.press('tab')
 pyautogui.write('sua_senha')
-pyautogui.press('enter')
+pyautogui.press('enter') """
 
 # 3. Importar a base de dados
 tabela_produtos = pandas.read_csv("produtos.csv")
 
-print(tabela_produtos)
+print(tabela_produtos.info())
+print(tabela_produtos.columns)
 
 # 4. Cadastrar 1 produtos
 for linha in tabela_produtos.index:
@@ -46,7 +48,7 @@ for linha in tabela_produtos.index:
     pyautogui.press('tab')
     pyautogui.write(str(tabela_produtos.loc[linha,"categoria"]))
     pyautogui.press('tab')
-    pyautogui.write(str(tabela_produtos.loc[linha,"preço"]))
+    pyautogui.write(str(tabela_produtos.loc[linha,"preco_unitario"]))
     pyautogui.press('tab')
     pyautogui.write(str(tabela_produtos.loc[linha,"custo"]))
     pyautogui.press('tab')
